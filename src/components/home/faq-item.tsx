@@ -6,9 +6,9 @@ export default function FaqItem(faq: { title: string; body: string }) {
   return (
     <Disclosure>
       {({ open }) => (
-        <div className={`border-b border-primary w-4/5 pb-[13px]`}>
+        <div className={`border-b font-body border-primary lg:w-4/5 pb-[13px]`}>
           <Disclosure.Button
-            className={`flex items-center text-sm justify-between w-full`}
+            className={`flex text-left items-end lg:items-center text-sm justify-between w-full`}
           >
             {faq.title}
             <div>
@@ -23,7 +23,9 @@ export default function FaqItem(faq: { title: string; body: string }) {
             leaveFrom="transform scale-100 opacity-100"
             leaveTo="transform scale-95 opacity-0"
           >
-            <Disclosure.Panel className={`mt-3 text-sm text-slate-400`}>
+            <Disclosure.Panel
+              className={`mt-3 text-left text-sm text-slate-400`}
+            >
               {faq.body}
             </Disclosure.Panel>
           </Transition>
