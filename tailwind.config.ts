@@ -21,6 +21,8 @@ const config: Config = {
       backgroundImage: {
         gradient:
           "linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%)",
+        "timeline-gradient":
+          "linear-gradient(270deg, #903AFF 0%, #D434FE 100%)",
       },
       fontSize: {
         hero: "5rem",
