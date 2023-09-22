@@ -1,20 +1,33 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
+      fontFamily: {
+        heading: ["var(--clashDisplay-font)", "sans-serif"],
+        body: ["var(--monteserrat-font)", "sans-serif"],
+        mono: ["var(--unicaOne-font)", "sans-serif"],
+      },
+      colors: {
+        "body-bg": "#150E28",
+        "footer-bg": "#100B20",
+        primary: "#D434FE",
+      },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        gradient:
+          "linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%)",
+      },
+      fontSize: {
+        hero: "5rem",
+        countdown: "4rem",
       },
     },
   },
   plugins: [],
-}
-export default config
+};
+export default config;
