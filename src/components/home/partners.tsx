@@ -1,6 +1,7 @@
 import React from "react";
 import { VerticalPartnerBar, HorizontalPartnerBar } from "../assets/bar";
 import Container from "../partials/container";
+import AnimateY from "../partials/animate-y";
 
 export default function Partners() {
   return (
@@ -19,33 +20,31 @@ export default function Partners() {
 
           <div className="relative z-20 rounded-md border border-primary py-8 lg:py-[144px]">
             <div className="hidden lg:block">
-              <div className="flex items-center gap-12 rounded-md px-[180px]">
-                <div className=" basis-3/5">
-                  <div className="relative left-10 pb-6">
-                    <img src="./images/liberty-assured.png" alt="" />
+              <AnimateY staggerAmount={0.25}>
+                <div className="flex items-center gap-12 rounded-md px-[180px]">
+                  <div className=" basis-3/5">
+                    <div className="relative left-10 pb-6">
+                      <img src="./images/liberty-assured.png" alt="" />
+                    </div>
                   </div>
-                </div>
-
-                <VerticalPartnerBar />
-
-                <div className="h-full w-full basis-3/5">
-                  <div className=" pb-6">
-                    <div>
-                      <img src="./images/liberty-pay.png" alt="" />
+                  <VerticalPartnerBar />
+                  <div className="h-full w-full basis-3/5">
+                    <div className=" pb-6">
+                      <div>
+                        <img src="./images/liberty-pay.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <VerticalPartnerBar />
+                  <div className="w-full basis-3/5 ">
+                    <div className=" pb-6">
+                      <div>
+                        <img src="./images/winwise.png" alt="" />
+                      </div>
                     </div>
                   </div>
                 </div>
-
-                <VerticalPartnerBar />
-
-                <div className="w-full basis-3/5 ">
-                  <div className=" pb-6">
-                    <div>
-                      <img src="./images/winwise.png" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </AnimateY>
 
               <div className="flex  gap-12 px-[180px]">
                 <HorizontalPartnerBar paddingRight="pr-10" />
@@ -55,41 +54,41 @@ export default function Partners() {
                 <HorizontalPartnerBar paddingLeft="pl-10" />
               </div>
 
-              <div className="mt-6 flex items-center gap-12 rounded-md px-[180px]">
-                <div className=" basis-3/5">
-                  <div className="mx-auto pb-6">
-                    <img
-                      className="relative left-8"
-                      src="./images/whispersms.png"
-                      alt=""
-                    />
+              <AnimateY staggerAmount={0.35}>
+                <div className="mt-6 flex items-center gap-12 rounded-md px-[180px]">
+                  <div className=" basis-3/5">
+                    <div className="mx-auto pb-6">
+                      <img
+                        className="relative left-8"
+                        src="./images/whispersms.png"
+                        alt=""
+                      />
+                    </div>
                   </div>
-                </div>
 
-                <VerticalPartnerBar />
+                  <VerticalPartnerBar />
 
-                <div className="h-full w-full basis-3/5">
-                  <div className=" pb-6">
-                    <div>
-                      <img src="./images/paybox.png" alt="" />
+                  <div className="h-full w-full basis-3/5">
+                    <div className=" pb-6">
+                      <div>
+                        <img src="./images/paybox.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <VerticalPartnerBar />
+
+                  <div className="w-full basis-3/5 ">
+                    <div className=" pb-6">
+                      <div>
+                        <img src="./images/vizual-plus.png" alt="" />
+                      </div>
                     </div>
                   </div>
                 </div>
-
-                <VerticalPartnerBar />
-
-                <div className="w-full basis-3/5 ">
-                  <div className=" pb-6">
-                    <div>
-                      <img src="./images/vizual-plus.png" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </AnimateY>
             </div>
-            {/* <img src="./images/whispersms.png" alt="" />
-              <img src="./images/paybox.png" alt="" />
-              <img src="./images/vizual-plus.png" alt="" /> */}
+
             <img
               className="mx-auto px-[45px] lg:hidden"
               src="./images/Partner and Sponsors.png"

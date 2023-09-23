@@ -1,7 +1,4 @@
-import { Montserrat, Unica_One } from "next/font/google";
-import localFont from "next/font/local";
 import AppLayout from "@/components/layouts/app-layout";
-import Container from "@/components/partials/container";
 import Hero from "@/components/home/hero";
 import Intro from "@/components/home/intro";
 import Guidelines from "@/components/home/guidelines";
@@ -12,29 +9,9 @@ import Rewards from "@/components/home/rewards";
 import Partners from "@/components/home/partners";
 import Privacy from "@/components/home/privacy";
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--monteserrat-font",
-});
-const unicaOne = Unica_One({
-  weight: ["400"],
-  subsets: ["latin"],
-  variable: "--unicaOne-font",
-});
-const clashDisplay = localFont({
-  src: "../../public/fonts/ClashDisplay-Variable.woff2",
-  variable: "--clashDisplay-font",
-});
-const typoHoop = localFont({
-  src: "../../public/fonts/Typo Hoop_Regular_Demo.otf",
-  variable: "--typoHoop-font",
-});
-
 export default function Home() {
   return (
-    <main
-      className={`bg-body-bg ${clashDisplay.variable} ${typoHoop.variable} ${unicaOne.variable} ${montserrat.variable}`}
-    >
+    <main className={`bg-body-bg`}>
       <AppLayout>
         <section className="border-b border-white/20">
           <Hero />

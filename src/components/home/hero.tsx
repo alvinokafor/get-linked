@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import Container from "../partials/container";
 import { Curve, CurveMobile } from "../assets/curve";
-import { distance } from "framer-motion";
+import AnimateX from "../partials/animate-x";
+import AnimateY from "../partials/animate-y";
 
 export default function Hero() {
   const [timerHours, setHours] = useState<string | number>("00");
@@ -18,7 +19,7 @@ export default function Hero() {
       const timeBetween = countdownDate - now;
 
       const hours = Math.floor(
-        (timeBetween % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        (timeBetween % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
       );
       const mins = Math.floor((timeBetween % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((timeBetween % (1000 * 60)) / 1000);
@@ -43,101 +44,107 @@ export default function Hero() {
     <Container>
       <div className="relative pt-8 font-body text-white">
         <img
-          className="absolute w-[10px] top-[90px] h-[12px] sm:w-auto sm:h-auto animate-pulse left-14 lg:top-16"
+          className="absolute left-14 top-[90px] h-[12px] w-[10px] animate-pulse sm:h-auto sm:w-auto lg:top-16"
           src="./images/hero-star.png"
           alt=""
         />
-        <div className="mb-8 flex flex-col">
-          <h1 className="font-bold text-center text-sm italic sm:text-xl lg:text-4xl sm:text-right">
-            Igniting a Revolution in HR Innovation
-          </h1>
+        <AnimateY staggerAmount={0.45}>
+          <div className="mb-8 flex flex-col">
+            <h1 className="text-center text-sm font-bold italic sm:text-right sm:text-xl lg:text-4xl">
+              Igniting a Revolution in HR Innovation
+            </h1>
 
-          <div className="self-end">
-            <Curve />
-            <CurveMobile />
+            <div className="self-end">
+              <Curve />
+              <CurveMobile />
+            </div>
           </div>
-        </div>
+        </AnimateY>
         <img
-          className="absolute right-[20px] h-[6px] w-[8px] sm:w-auto sm:h-auto animate-pulse lg:top-[146px] lg:right-[500px]"
+          className="absolute right-[20px] h-[6px] w-[8px] animate-pulse sm:h-auto sm:w-auto lg:right-[500px] lg:top-[146px]"
           src="./images/dim-star.png"
           alt=""
         />
-        <div className="lg:absolute flex flex-col items-center lg:items-start z-20 mt-20">
-          <div className="font-heading text-[2rem] justify-center sm:text-7xl text-center lg:text-left lg:text-hero font-bold">
-            <div className="relative">
-              <img
-                className="absolute h-[26px] w-[18px] right-10 -top-3 sm:h-auto sm:w-auto sm:right-20 sm:-top-14 lg:right-36 lg:-top-14"
-                src="./images/light-bulb.png"
-              />
+        <AnimateY staggerAmount={0.25}>
+          <div className="z-20 mt-20 flex flex-col items-center lg:absolute lg:items-start">
+            <div className="justify-center text-center font-heading text-[2rem] font-bold sm:text-7xl lg:text-left lg:text-hero">
+              <div className="relative">
+                <img
+                  className="absolute -top-3 right-10 h-[26px] w-[18px] sm:-top-14 sm:right-20 sm:h-auto sm:w-auto lg:-top-14 lg:right-36"
+                  src="./images/light-bulb.png"
+                />
 
-              <h1>getlinked Tech</h1>
-            </div>
-            <div className="flex items-center">
-              <h1>
-                Hackathon <span className="text-primary">1.0</span>
-              </h1>
-              <div className="h-[32px] w-[54px] md:h-[86px] md:w-[144px]">
-                <img className="w-full" src="./images/emoji.png" alt="" />
+                <h1>getlinked Tech</h1>
+              </div>
+              <div className="flex items-center">
+                <h1>
+                  Hackathon <span className="text-primary">1.0</span>
+                </h1>
+                <div className="h-[32px] w-[54px] md:h-[86px] md:w-[144px]">
+                  <img className="w-full" src="./images/emoji.png" alt="" />
+                </div>
               </div>
             </div>
+            <p className="mt-2s mx-auto mb-10 text-center font-body text-sm sm:text-base lg:mx-0 lg:w-3/4 lg:text-left">
+              Participate in getlinked tech Hackathon 2023 stand a chance to win
+              a Big prize
+            </p>
+
+            <button className="w-max rounded-md border border-[#903AFF] bg-gradient px-[52px] py-4 font-body transition-all duration-150 hover:border-[#903AFF] hover:bg-none">
+              Register
+            </button>
+
+            <div className="relative mt-4 flex gap-x-10 sm:mt-20">
+              <p className="text-countdown">
+                <span className="font-mono text-5xl sm:text-countdown">
+                  {timerHours}
+                </span>
+                <span className="text-sm">H</span>
+              </p>
+              <p className="text-countdown">
+                <span className="font-mono text-5xl sm:text-countdown">
+                  {timerMins}
+                </span>
+                <span className="text-sm">M</span>
+              </p>
+              <p className="text-countdown">
+                <span className="font-mono text-5xl sm:text-countdown">
+                  {timerSeconds}
+                </span>
+                <span className="text-sm">S</span>
+              </p>
+            </div>
+
+            <img
+              className="absolute bottom-[410px] right-0 h-[6px] w-[8px] animate-pulse sm:h-auto sm:w-auto lg:bottom-24 lg:right-40"
+              src="./images/dim-star.png"
+              alt=""
+            />
           </div>
-          <p className="text-center mt-2s text-sm sm:text-base lg:text-left mx-auto lg:mx-0 font-body lg:w-3/4 mb-10">
-            Participate in getlinked tech Hackathon 2023 stand a chance to win a
-            Big prize
-          </p>
+        </AnimateY>
 
-          <button className="py-4 w-max font-body px-[52px] rounded-md bg-gradient hover:bg-none border border-[#903AFF] hover:border-[#903AFF] transition-all duration-150">
-            Register
-          </button>
-
-          <div className="relative flex gap-x-10 mt-4 sm:mt-20">
-            <p className="text-countdown">
-              <span className="font-mono text-5xl sm:text-countdown">
-                {timerHours}
-              </span>
-              <span className="text-sm">H</span>
-            </p>
-            <p className="text-countdown">
-              <span className="font-mono text-5xl sm:text-countdown">
-                {timerMins}
-              </span>
-              <span className="text-sm">M</span>
-            </p>
-            <p className="text-countdown">
-              <span className="font-mono text-5xl sm:text-countdown">
-                {timerSeconds}
-              </span>
-              <span className="text-sm">S</span>
-            </p>
-          </div>
-
+        <AnimateX staggerAmount={0.35} direction={-40}>
           <img
-            className="absolute animate-pulse h-[6px] w-[8px] sm:w-auto sm:h-auto right-0 bottom-[410px] lg:bottom-24 lg:right-40"
-            src="./images/dim-star.png"
+            className="relative z-10 basis-1/5 object-cover lg:-right-[450px]"
+            src="./images/hero-img.png"
             alt=""
           />
-        </div>
+        </AnimateX>
 
         <img
-          className="object-cover relative lg:-right-[450px] z-10 basis-1/5"
-          src="./images/hero-img.png"
-          alt=""
-        />
-
-        <img
-          className="hidden lg:block absolute h-[550px] top-0 -right-20"
+          className="absolute -right-20 top-0 hidden h-[550px] lg:block"
           src="./images/matrix.png"
           alt="matrix pattern"
         />
 
         <img
-          className="hidden lg:block absolute z-20 opacity-50 lg:left-[450px] -top-[170px]"
+          className="absolute -top-[170px] z-20 hidden opacity-50 lg:left-[450px] lg:block"
           src="./images/purple-lens-flare.png"
           alt="lens flare"
         />
 
         <img
-          className="absolute top-52 right-[100px] lg:-top-[150px] lg:right-[250px] opacity-60"
+          className="absolute right-[100px] top-52 opacity-60 lg:-top-[150px] lg:right-[250px]"
           src="./images/purple-lens-flare.png"
           alt="lens flare"
         />

@@ -10,7 +10,7 @@ import Instagram from "../assets/instagram";
 
 export default function Footer() {
   return (
-    <footer className="relative z-20 bg-footer-bg pb-10 pt-[70px] text-white">
+    <footer className="relative z-20 bg-footer-bg pb-10 pt-[70px] font-body text-white">
       <Container>
         <div className="flex flex-col justify-between md:flex-row">
           <div className="mb-8 flex flex-col gap-y-[72px] lg:mb-0">
