@@ -1,24 +1,24 @@
 import React from "react";
 import Container from "../partials/container";
-import { Bar, SmallBar } from "../assets/bar";
+import { Bar } from "../assets/bar";
 import { timelineData } from "@/utils/data";
 
 export default function Timeline() {
   return (
-    <div className="mb-[109px] relative">
+    <div className="relative mb-[109px]">
       <Container>
-        <div className="text-center space-y-3 text-white font-body mt-[72px] mb-[91px]">
-          <h1 className="font-heading font-bold text-[2rem]">Timeline</h1>
-          <p className="text-xs lg:w-[30%] mx-auto">
+        <div className="mb-[91px] mt-[72px] space-y-3 text-center font-body text-white">
+          <h1 className="font-heading text-[2rem] font-bold">Timeline</h1>
+          <p className="mx-auto text-xs lg:w-[30%]">
             Here is the breakdown of the time we anticipate using for the
             upcoming event.
           </p>
         </div>
 
         <div className="hidden xl:block">
-          <div className="text-white flex items-end gap-x-24">
+          <div className="flex items-end gap-x-24 text-white">
             <div className="w-[40%] space-y-3">
-              <h1 className="text-2xl text-right text-primary font-bold">
+              <h1 className="text-right text-2xl font-bold text-primary">
                 Hackathon Announcement
               </h1>
               <p className="text-right">
@@ -27,32 +27,32 @@ export default function Timeline() {
               </p>
             </div>
 
-            <div className="flex gap-y-3 flex-col items-center">
+            <div className="flex flex-col items-center gap-y-3">
               <Bar />
-              <div className="w-[53px] flex items-center justify-center font-bold text-2xl h-[53px] bg-timeline-gradient rounded-full">
+              <div className="flex h-[53px] w-[53px] items-center justify-center rounded-full bg-timeline-gradient text-2xl font-bold">
                 1
               </div>
             </div>
 
-            <h1 className="text-2xl text-primary font-bold">
+            <h1 className="text-2xl font-bold text-primary">
               November 18, 2023
             </h1>
           </div>
 
-          <div className="text-white flex pt-3 items-end gap-x-24">
-            <h1 className="text-2xl text-right w-[40%] text-primary font-bold">
+          <div className="flex items-end gap-x-24 pt-3 text-white">
+            <h1 className="w-[40%] text-right text-2xl font-bold text-primary">
               November 18, 2023
             </h1>
 
-            <div className="flex gap-y-3 flex-col items-center">
+            <div className="flex flex-col items-center gap-y-3">
               <Bar />
-              <div className="w-[53px] flex items-center justify-center font-bold text-2xl h-[53px] bg-timeline-gradient rounded-full">
+              <div className="flex h-[53px] w-[53px] items-center justify-center rounded-full bg-timeline-gradient text-2xl font-bold">
                 2
               </div>
             </div>
 
             <div className="w-[38%] space-y-3">
-              <h1 className="text-2xl text-left text-primary font-bold">
+              <h1 className="text-left text-2xl font-bold text-primary">
                 Team Registration begins
               </h1>
               <p className="text-left">
@@ -62,9 +62,9 @@ export default function Timeline() {
             </div>
           </div>
 
-          <div className="text-white mt-3 flex items-end gap-x-24">
+          <div className="mt-3 flex items-end gap-x-24 text-white">
             <div className="w-[40%] space-y-3">
-              <h1 className="text-2xl text-right text-primary font-bold">
+              <h1 className="text-right text-2xl font-bold text-primary">
                 Team Registration ends
               </h1>
               <p className="text-right">
@@ -72,32 +72,32 @@ export default function Timeline() {
               </p>
             </div>
 
-            <div className="flex gap-y-3 flex-col items-center">
+            <div className="flex flex-col items-center gap-y-3">
               <Bar />
-              <div className="w-[53px] flex items-center justify-center font-bold text-2xl h-[53px] bg-timeline-gradient rounded-full">
+              <div className="flex h-[53px] w-[53px] items-center justify-center rounded-full bg-timeline-gradient text-2xl font-bold">
                 3
               </div>
             </div>
 
-            <h1 className="text-2xl text-primary font-bold">
+            <h1 className="text-2xl font-bold text-primary">
               November 18, 2023
             </h1>
           </div>
 
-          <div className="text-white flex pt-3 items-end gap-x-24">
-            <h1 className="text-2xl text-right w-[40%] text-primary font-bold">
+          <div className="flex items-end gap-x-24 pt-3 text-white">
+            <h1 className="w-[40%] text-right text-2xl font-bold text-primary">
               November 18, 2023
             </h1>
 
-            <div className="flex gap-y-3 flex-col items-center">
+            <div className="flex flex-col items-center gap-y-3">
               <Bar />
-              <div className="w-[53px] flex items-center justify-center font-bold text-2xl h-[53px] bg-timeline-gradient rounded-full">
+              <div className="flex h-[53px] w-[53px] items-center justify-center rounded-full bg-timeline-gradient text-2xl font-bold">
                 4
               </div>
             </div>
 
             <div className="w-[38%] space-y-3">
-              <h1 className="text-2xl text-left text-primary font-bold">
+              <h1 className="text-left text-2xl font-bold text-primary">
                 Announcement of the accepted teams and ideas
               </h1>
               <p className="text-left">
@@ -107,9 +107,9 @@ export default function Timeline() {
             </div>
           </div>
 
-          <div className="text-white mt-3 flex items-end gap-x-24">
+          <div className="mt-3 flex items-end gap-x-24 text-white">
             <div className="w-[40%] space-y-3">
-              <h1 className="text-2xl text-right text-primary font-bold">
+              <h1 className="text-right text-2xl font-bold text-primary">
                 Getlinked Hackathon 1.0 Offically Begins
               </h1>
               <p className="text-right">
@@ -118,32 +118,32 @@ export default function Timeline() {
               </p>
             </div>
 
-            <div className="flex gap-y-3 flex-col items-center">
+            <div className="flex flex-col items-center gap-y-3">
               <Bar />
-              <div className="w-[53px] flex items-center justify-center font-bold text-2xl h-[53px] bg-timeline-gradient rounded-full">
+              <div className="flex h-[53px] w-[53px] items-center justify-center rounded-full bg-timeline-gradient text-2xl font-bold">
                 5
               </div>
             </div>
 
-            <h1 className="text-2xl text-primary font-bold">
+            <h1 className="text-2xl font-bold text-primary">
               November 18, 2023
             </h1>
           </div>
 
-          <div className="text-white flex pt-3 items-end gap-x-24">
-            <h1 className="text-2xl text-right w-[40%] text-primary font-bold">
+          <div className="flex items-end gap-x-24 pt-3 text-white">
+            <h1 className="w-[40%] text-right text-2xl font-bold text-primary">
               November 18, 2023
             </h1>
 
-            <div className="flex gap-y-3 flex-col items-center">
+            <div className="flex flex-col items-center gap-y-3">
               <Bar />
-              <div className="w-[53px] flex items-center justify-center font-bold text-2xl h-[53px] bg-timeline-gradient rounded-full">
+              <div className="flex h-[53px] w-[53px] items-center justify-center rounded-full bg-timeline-gradient text-2xl font-bold">
                 6
               </div>
             </div>
 
             <div className="w-[38%] space-y-3">
-              <h1 className="text-2xl text-left text-primary font-bold">
+              <h1 className="text-left text-2xl font-bold text-primary">
                 Demo Day
               </h1>
               <p className="text-left">
@@ -154,22 +154,22 @@ export default function Timeline() {
           </div>
         </div>
 
-        <div className="text-white xl:hidden space-y-7">
+        <div className="space-y-7 text-white xl:hidden">
           {timelineData.map((data) => (
             <div key={data.id} className="space-y-1">
-              <div className="space-y-3 border-l-2 md:border-l-3 pl-5 relative left-2.5 md:left-5 border-primary">
-                <h1 className="text-[12px] md:text-base text-primary font-bold">
+              <div className="md:border-l-3 relative left-2.5 space-y-3 border-l-2 border-primary pl-5 md:left-5">
+                <h1 className="text-[12px] font-bold text-primary md:text-base">
                   {data.title}
                 </h1>
                 <p className="text-[12px] md:text-base">{data.body}</p>
               </div>
 
               <div className="flex items-center gap-x-3">
-                <div className="w-[20px] md:w-[40px] md:h-[40px] flex items-center justify-center font-bold text-[12px] md:text-base h-[20px] bg-timeline-gradient rounded-full">
+                <div className="flex h-[20px] w-[20px] items-center justify-center rounded-full bg-timeline-gradient text-[12px] font-bold md:h-[40px] md:w-[40px] md:text-base">
                   {data.id}
                 </div>
 
-                <h1 className="text-[12px] md:text-base self-end text-right text-primary font-bold">
+                <h1 className="self-end text-right text-[12px] font-bold text-primary md:text-base">
                   {data.date}
                 </h1>
               </div>
@@ -181,17 +181,17 @@ export default function Timeline() {
       </Container>
 
       <img
-        className="absolute h-[16px] w-[14px] lg:h-auto lg:w-auto animate-pulse top-32 left-28 lg:top-40 lg:left-60"
+        className="absolute left-28 top-32 h-[16px] w-[14px] animate-pulse lg:left-60 lg:top-40 lg:h-auto lg:w-auto"
         src="./images/purple-star1.png"
         alt=""
       />
       <img
-        className="absolute h-[12px] w-[10px] lg:h-auto lg:w-auto animate-pulse left-5 lg:left-32"
+        className="absolute left-5 h-[12px] w-[10px] animate-pulse lg:left-32 lg:h-auto lg:w-auto"
         src="./images/dim-star.png"
         alt=""
       />
       <img
-        className="absolute h-[12px] w-[10px] lg:h-auto lg:w-auto animate-pulse right-24 lg:right-60 top-[550px] lg:top-[700px]"
+        className="absolute right-24 top-[550px] h-[12px] w-[10px] animate-pulse lg:right-60 lg:top-[700px] lg:h-auto lg:w-auto"
         src="./images/hero-star.png"
         alt=""
       />

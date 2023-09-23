@@ -40,7 +40,9 @@ export default function Rewards() {
                   alt="Silver Medal"
                 />
                 <div className="rounded-lg border border-primary bg-primary/[.12] px-2 pb-8 pt-12 lg:px-[26px] lg:pb-9 lg:pt-28">
-                  <h1 className="text-[0.75rem]">2nd</h1>
+                  <h1 className="text-[0.75rem] font-semibold lg:text-2xl">
+                    2nd
+                  </h1>
                   <h2 className="text-[0.75rem] font-semibold lg:text-2xl">
                     Runner
                   </h2>
@@ -78,7 +80,9 @@ export default function Rewards() {
                   alt="Bronze Medal"
                 />
                 <div className="rounded-lg border border-primary bg-primary/[.12] px-2 pb-8 pt-12 lg:px-[26px] lg:pb-9 lg:pt-28">
-                  <h1 className="text-[0.75rem]">3rd</h1>
+                  <h1 className="text-[0.75rem] font-semibold lg:text-2xl">
+                    3rd
+                  </h1>
                   <h2 className="text-[0.75rem] font-semibold lg:text-2xl">
                     Runner
                   </h2>
@@ -98,7 +102,7 @@ export default function Rewards() {
         alt=""
       />
       <img
-        className="absolute right-0 top-40 z-10"
+        className="absolute right-0 top-60 z-10"
         src="./images/cut-flare.png"
         alt=""
       />
@@ -127,6 +131,8 @@ export default function Rewards() {
         src="./images/hero-star.png"
         alt=""
       />
+
+      <div className="absolute inset-0 bg-black/40"></div>
     </div>
   );
 }

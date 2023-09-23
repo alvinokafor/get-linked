@@ -12,6 +12,7 @@ const config: Config = {
         heading: ["var(--clashDisplay-font)", "sans-serif"],
         body: ["var(--monteserrat-font)", "sans-serif"],
         mono: ["var(--unicaOne-font)", "sans-serif"],
+        typo: ["var(--typoHoop-font)", "sans-serif"],
       },
       colors: {
         "body-bg": "#150E28",
