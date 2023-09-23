@@ -164,7 +164,7 @@ export default function Timeline() {
                 <p className="text-[12px] md:text-base">{data.body}</p>
               </div>
 
-              <div className="flex items-center gap-x-2">
+              <div className="flex items-center gap-x-3">
                 <div className="w-[20px] md:w-[40px] md:h-[40px] flex items-center justify-center font-bold text-[12px] md:text-base h-[20px] bg-timeline-gradient rounded-full">
                   {data.id}
                 </div>

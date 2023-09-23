@@ -8,6 +8,7 @@ import Guidelines from "@/components/home/guidelines";
 import Criteria from "@/components/home/criteria";
 import FAQS from "@/components/home/faqs";
 import Timeline from "@/components/home/timeline";
+import Rewards from "@/components/home/rewards";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -46,6 +47,9 @@ export default function Home() {
         </section>
         <section className="border-b border-white/20">
           <Timeline />
+        </section>
+        <section className="border-b border-white/20">
+          <Rewards />
         </section>
       </AppLayout>
     </main>

@@ -1,8 +1,44 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Container from "../partials/container";
 import { Curve, CurveMobile } from "../assets/curve";
+import { distance } from "framer-motion";
 
 export default function Hero() {
+  const [timerHours, setHours] = useState<string | number>("00");
+  const [timerMins, setMins] = useState<string | number>("00");
+  const [timerSeconds, setSeconds] = useState<string | number>("00");
+
+  let interval = useRef<number>();
+
+  const startTimer = () => {
+    const countdownDate = new Date("September 30, 2023 00:00:00").getTime();
+    //@ts-ignore
+    interval = setInterval(() => {
+      const now = new Date().getTime();
+      const timeBetween = countdownDate - now;
+
+      const hours = Math.floor(
+        (timeBetween % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const mins = Math.floor((timeBetween % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeBetween % (1000 * 60)) / 1000);
+
+      if (timeBetween < 0) {
+        clearInterval(interval.current);
+      } else {
+        setHours(hours);
+        setMins(mins);
+        setSeconds(seconds);
+      }
+    }, 1000);
+  };
+
+  useEffect(() => {
+    startTimer();
+    return () => {
+      clearInterval(interval.current);
+    };
+  });
   return (
     <Container>
       <div className="relative pt-8 font-body text-white">
@@ -56,15 +92,21 @@ export default function Hero() {
 
           <div className="relative flex gap-x-10 mt-4 sm:mt-20">
             <p className="text-countdown">
-              <span className="font-mono text-5xl sm:text-countdown">00</span>
+              <span className="font-mono text-5xl sm:text-countdown">
+                {timerHours}
+              </span>
               <span className="text-sm">H</span>
             </p>
             <p className="text-countdown">
-              <span className="font-mono text-5xl sm:text-countdown">00</span>
+              <span className="font-mono text-5xl sm:text-countdown">
+                {timerMins}
+              </span>
               <span className="text-sm">M</span>
             </p>
             <p className="text-countdown">
-              <span className="font-mono text-5xl sm:text-countdown">00</span>
+              <span className="font-mono text-5xl sm:text-countdown">
+                {timerSeconds}
+              </span>
               <span className="text-sm">S</span>
             </p>
           </div>
