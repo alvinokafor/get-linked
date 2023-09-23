@@ -108,13 +108,15 @@ export default function Navbar() {
             <ul className="flex flex-col gap-y-5 text-lg">
               {navLinks.map((link) => {
                 return (
-                  <li
-                    className={`font-medium transition-all duration-100 hover:font-semibold`}
-                    onClick={handleCloseMobileMenu}
-                    key={link.name}
-                  >
-                    {link.name}
-                  </li>
+                  <Link href={link.href}>
+                    <li
+                      className={`font-medium transition-all duration-100 hover:font-semibold`}
+                      onClick={handleCloseMobileMenu}
+                      key={link.name}
+                    >
+                      {link.name}
+                    </li>
+                  </Link>
                 );
               })}
             </ul>
