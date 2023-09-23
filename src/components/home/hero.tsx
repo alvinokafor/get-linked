@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import Container from "../partials/container";
 import { Curve, CurveMobile } from "../assets/curve";
 import AnimateX from "../partials/animate-x";
@@ -90,9 +91,11 @@ export default function Hero() {
               a Big prize
             </p>
 
-            <button className="w-max rounded-md border border-[#903AFF] bg-gradient px-[52px] py-4 font-body transition-all duration-150 hover:border-[#903AFF] hover:bg-none">
-              Register
-            </button>
+            <Link href={`/register`}>
+              <button className="w-max rounded-md border border-[#903AFF] bg-gradient px-[52px] py-4 font-body transition-all duration-150 hover:border-[#903AFF] hover:bg-none">
+                Register
+              </button>
+            </Link>
 
             <div className="relative mt-4 flex gap-x-10 sm:mt-20">
               <p className="text-countdown">

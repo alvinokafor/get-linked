@@ -7,6 +7,7 @@ import Linkedin from "../assets/linkedin";
 import Facebook from "../assets/facebook";
 import Twitter from "../assets/twitter";
 import Instagram from "../assets/instagram";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -36,7 +37,12 @@ export default function Footer() {
               <li>Overview</li>
               <li>Timeline</li>
               <li>FAQs</li>
-              <li>Register</li>
+
+              <li>
+                {" "}
+                <Link href={`/register`}>Register</Link>
+              </li>
+
               <li className="flex items-center gap-x-4 text-primary">
                 <span>Follow us</span>
                 <span className="flex items-center gap-x-5">
